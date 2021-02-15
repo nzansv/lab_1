@@ -1,4 +1,5 @@
 package com.example.demo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -12,8 +13,8 @@ public class Card {
     private double balance;
     Scanner in = new Scanner(System.in);
 
-
-    public Card(String cardNo, String expDate, int cvv, int pin, double balance) {
+    @Autowired
+    public Card(@Value("${card.cardNo}")String cardNo, @Value("${card.expDate}")String expDate, @Value("${card.cvv}")int cvv, @Value("${card.pin}")int pin, @Value("${card.balance}")double balance) {
         this.cardNo = cardNo;
         this.expDate = expDate;
         this.cvv = cvv;

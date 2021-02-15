@@ -17,6 +17,13 @@ public class DemoApplication {
         Account account = context.getBean("account", Account.class);
         Card card = context.getBean("card", Card.class);
 
+        System.out.println("Login: " + account.getLogin());
+        System.out.println("Password:" + account.getPassword());
+        System.out.println("Card NO: " + card.getCardNo());
+        System.out.println("Card balance: " + card.getBalance());
+        System.out.println("Card CVV: " + card.getCvv());
+        System.out.println("Card PIN: " + card.getPin());
+
 
 //        ATM atm = context.getBean("atm", ATM.class);
 //        Bank bank = context.getBean("bank", Bank.class);
