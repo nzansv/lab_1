@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.sql.Connection;
@@ -16,7 +17,6 @@ public class ATM implements BankService {
     private final String password = "123";
     Scanner in = new Scanner(System.in);
 
-    @Autowired
     public ATM() {
     }
 

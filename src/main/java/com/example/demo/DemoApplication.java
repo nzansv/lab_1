@@ -17,19 +17,22 @@ public class DemoApplication {
         Account account = context.getBean("account", Account.class);
         Card card = context.getBean("card", Card.class);
 
-        System.out.println("Login: " + account.getLogin());
-        System.out.println("Password:" + account.getPassword());
-        System.out.println("Card NO: " + card.getCardNo());
-        System.out.println("Card balance: " + card.getBalance());
-        System.out.println("Card CVV: " + card.getCvv());
-        System.out.println("Card PIN: " + card.getPin());
+
+        Bank bank = context.getBean("bank", Bank.class);
+
+        System.out.println("Bank NO: " + bank.getBankNO());
+        System.out.println("Bank city: " + bank.getCity());
+
+        for(Account a : bank.getAccounts()) {
+            System.out.println("Login: " + a.getLogin());
+            System.out.println("Password:" + a.getPassword());
+            System.out.println("Card NO: " + a.getCard().getCardNo());
+            System.out.println("Card balance: " + a.getCard().getBalance());
+            System.out.println("Card CVV: " + a.getCard().getCvv());
+            System.out.println("Card PIN: " + a.getCard().getPin());
+        }
 
 
-//        ATM atm = context.getBean("atm", ATM.class);
-//        Bank bank = context.getBean("bank", Bank.class);
-//        BankServiceContext bankServiceContext = context.getBean("bankServiceContext", BankServiceContext.class);
-//
-//
 //        boolean isCorrect = true;
 //
 //        while (isCorrect) {

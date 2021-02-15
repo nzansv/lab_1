@@ -1,6 +1,8 @@
 package com.example.demo;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.*;
@@ -16,7 +18,8 @@ public class Bank {
     public Bank() {
     }
 
-    public Bank(List<Account> accounts, int bankNO, String city) {
+    @Autowired
+    public Bank(List<Account> accounts, @Value("${bank.bankNO}")int bankNO, @Value("${bank.city}")String city) {
         this.accounts = accounts;
         this.bankNO = bankNO;
         this.city = city;
