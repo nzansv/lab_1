@@ -1,7 +1,9 @@
 package com.example.demo;
 
-import java.util.Scanner;
+import org.springframework.stereotype.Component;
 
+import java.util.Scanner;
+@Component
 public class WithdrawStrategy implements BankService{
     @Override
     public Card bankingProcess(Card card) {

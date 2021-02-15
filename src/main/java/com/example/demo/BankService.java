@@ -1,5 +1,8 @@
 package com.example.demo;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public interface BankService {
-    public void bankingProcess(Card card);
+    public Card bankingProcess(Card card);
 }

@@ -1,8 +1,11 @@
 package com.example.demo;
 
 
+import org.springframework.stereotype.Component;
+
 import java.util.*;
 
+@Component
 public class Bank {
     private List<Account> accounts = new ArrayList<>();
     private int bankNO;

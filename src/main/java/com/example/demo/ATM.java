@@ -1,10 +1,13 @@
 package com.example.demo;
 
+import org.springframework.stereotype.Component;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.Scanner;
 
+@Component
 public class ATM implements BankService {
 
     private final String url = "jdbc:postgresql://localhost/atm";

@@ -1,10 +1,17 @@
 package com.example.demo;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
 import java.util.*;
+
+@Component
 public class Card {
     private String cardNo, expDate;
-    private int cvv, pin;
+    private int cvv;
+    private int pin;
     private double balance;
     Scanner in = new Scanner(System.in);
+
 
     public Card(String cardNo, String expDate, int cvv, int pin, double balance) {
         this.cardNo = cardNo;
